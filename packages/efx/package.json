@@ -1,0 +1,14 @@
+{
+  "name": "@openeforms/efx",
+  "version": "0.1.0",
+  "description": "Parser and XPath translator for EFX, the eForms Expression Language. No JVM required.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": { ".": { "types": "./dist/index.d.ts", "default": "./dist/index.js" } },
+  "files": ["dist", "grammar", "README.md"],
+  "engines": { "node": ">=20" },
+  "scripts": { "build": "tsc -p tsconfig.json", "test": "node --test test/*.test.ts" },
+  "keywords": ["efx", "eforms", "xpath", "parser", "procurement"]
+}
