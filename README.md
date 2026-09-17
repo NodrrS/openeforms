@@ -14,14 +14,14 @@ The obstacle is not the licence. It is the dependency.
 
 Early. `@openeforms/core` parses and normalises notices and is tested against a full
 month of production data. `@openeforms/efx` implements the EFX expression
-language and translates it to XPath. The remaining three packages are not
-written yet.
+language and translates it to XPath. `@openeforms/validate` runs the SDK's
+Schematron rules. The remaining two packages are not written yet.
 
 | Package | Purpose | State |
 | --- | --- | --- |
 | [`@openeforms/core`](packages/core) | Namespace-aware parser, normalised notice model, export ingest | **working, tested** |
 | [`@openeforms/efx`](packages/efx) | EFX parser and XPath translator, no JVM | **working, tested** |
-| `@openeforms/validate` | Schematron validation via SchXslt and SaxonJS | planned |
+| [`@openeforms/validate`](packages/validate) | ISO Schematron validation, no JVM and no XSLT step | **working, tested** |
 | `@openeforms/lineage` | Procedure index over `ContractFolderID`, notice-version diffing | planned |
 | `@openeforms/cli` | Command-line ingest, validation and reporting | planned |
 
