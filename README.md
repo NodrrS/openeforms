@@ -89,9 +89,13 @@ Requires Node 20 or newer. Node 22 runs the TypeScript sources directly.
 
 ```bash
 npm install
-npm test          # 27 unit tests, no network, no fixtures
-npm run build
+npm test     # builds first, then runs every package's tests
 ```
+
+`npm test` builds before running because `@openeforms/lineage` imports
+`@openeforms/core`'s published entry point. Tests that need large fixtures skip
+themselves when those are absent, so a clean clone goes green without any
+downloads.
 
 The corpus test checks the parser against a real monthly export and skips itself when the
 fixture is absent:

@@ -2,12 +2,17 @@
   "name": "openeforms-monorepo",
   "private": true,
   "type": "module",
-  "workspaces": ["packages/*"],
-  "engines": { "node": ">=20" },
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "build": "npm run build --workspaces --if-present",
     "test": "npm run test --workspaces --if-present",
-    "typecheck": "tsc -b"
+    "typecheck": "tsc -b",
+    "pretest": "npm run build"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
